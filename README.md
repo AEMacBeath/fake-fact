@@ -21,6 +21,7 @@ _Note: add description_
 ## Project Planning
 ### Build plan
 1. Create inital user stories <!--Complete-->
-2. Install Django and supporting libraries <!--Ongoing-->
-3. Create Django Project (fakefact) and app (...)
-4. 
+2. Install Django and supporting libraries <!--Complete-->
+3. Create Django Project (fakefact) and app (...) <!--Complete-->
+4. Create and Deploy App in Heroku <!--Complete-->
+5. 

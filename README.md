@@ -36,3 +36,19 @@ _Note: add description_
         -   [USER STORY: Publish posts](https://github.com/AEMacBeath/fake-fact/issues/5)
         -   [USER STORY: Edit posts](https://github.com/AEMacBeath/fake-fact/issues/6)
         -   [USER STORY: Delete posts](https://github.com/AEMacBeath/fake-fact/issues/7)
+7. Create templates to render view
+    -   Install [Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
+    -   Add html files
+    -   Link up urls
+8. Cretae initial view
+    -   Navbar
+    -   Background image
+    -   Footer
+
+
+
+
+
+## Credits
+-   CI I think before i blog 
+-   Bootstrap documentation

@@ -18,10 +18,12 @@ _Note: add description_
 
 ## Project Planning
 1. Create inital user stories <!--Complete-->
-2. Install Django and supporting libraries <!--Complete-->
-3. Create Django Project (fakefact) and app (...) <!--Complete-->
-4. Create and Deploy App in Heroku <!--Complete-->
-5. Create Model (Post) <!--Complete-->
+2. Initial design wireframes
+![initial_design_wireframes](readme_images/initial_design_wireframe.png)
+3. Install Django and supporting libraries <!--Complete-->
+4. Create Django Project (fakefact) and app (...) <!--Complete-->
+5. Create and Deploy App in Heroku <!--Complete-->
+6. Create Model (Post) <!--Complete-->
     -   featured_image
     -   title
     -   status
@@ -30,21 +32,21 @@ _Note: add description_
     -   fake
     -   fact
     -   content - revealed once user vore fake or fact
-6. Set up Django Admin Panel <!--Compelete-->
+7. Set up Django Admin Panel <!--Compelete-->
     -   User Stories completed
         -   [USER STORY: Create draft posts](https://github.com/AEMacBeath/fake-fact/issues/4)
         -   [USER STORY: Publish posts](https://github.com/AEMacBeath/fake-fact/issues/5)
         -   [USER STORY: Edit posts](https://github.com/AEMacBeath/fake-fact/issues/6)
         -   [USER STORY: Delete posts](https://github.com/AEMacBeath/fake-fact/issues/7)
-7. Create templates to render view
+8. Create templates to render view <!--Compelete-->
     -   Install [Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
     -   Add html files
     -   Link up urls
-8. Cretae initial view
+9. Create initial view <!--Compelete-->
     -   Navbar
     -   Background image
     -   Footer
-
+10. 
 
 
 
@@ -52,3 +54,4 @@ _Note: add description_
 ## Credits
 -   CI I think before i blog 
 -   Bootstrap documentation
+-   Wireframes created on [Lucid](https://lucid.app/)

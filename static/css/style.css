@@ -1,0 +1,18 @@
+/*---------------------------------------- Navbar */
+.navbar-nav {
+    position: absolute;
+    right: 10px;
+}
+
+/*---------------------------------------- Backgeound image */
+body {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('https://res.cloudinary.com/aemacbeath/image/upload/v1658426728/true-false-quiz_zsivav.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+/*---------------------------------------- Footer */

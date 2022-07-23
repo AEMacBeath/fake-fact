@@ -7,6 +7,8 @@ STATUS = ((0, "Fake"), (1, "Fact"))
 class Post(models.Model):
     featured_image = CloudinaryField('image', default='placeholder')
     title = models.CharField(max_length=300, unique=True)
+    content = models.TextField()
+    excerpt = models.TextField(blank=True)
     status = models.IntegerField(choices=STATUS)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='stories')
@@ -15,7 +17,6 @@ class Post(models.Model):
     fact = models.ManyToManyField(User, related_name='post_fact', blank=True)
     published = models.BooleanField(default=False)
     slug = models.SlugField(max_length=100, unique=True)
-    content = models.TextField()
 
     class Meta:
         ordering = ['-created']

@@ -46,7 +46,8 @@ _Note: add description_
     -   Navbar
     -   Background image
     -   Footer
-10. Add cards for posts using [Bootstrap](https://getbootstrap.com/docs/5.2/components/card/)
+10. Add cards for posts using [Bootstrap](https://getbootstrap.com/docs/5.2/components/card/) <!--Complete-->
+11. Allign cards on page using bootstrap rows <!--Complete-->
 
 
 

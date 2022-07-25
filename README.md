@@ -42,12 +42,14 @@ _Note: add description_
     -   Install [Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
     -   Add html files
     -   Link up urls
-9. Create initial view <!--Compelete-->
+9. Create main view <!--Compelete-->
     -   Navbar
     -   Background image
     -   Footer
-10. Add cards for posts using [Bootstrap](https://getbootstrap.com/docs/5.2/components/card/) <!--Complete-->
-11. Allign cards on page using bootstrap rows <!--Complete-->
+    -   Cards for posts using [Bootstrap](https://getbootstrap.com/docs/5.2/components/card/) <!--Complete-->
+    -   User Stories completed
+        -   [USER STORY: View posts](https://github.com/AEMacBeath/fake-fact/issues/1)
+10. Authorisation <!--ongoing-->
 
 
 

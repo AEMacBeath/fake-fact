@@ -38,4 +38,11 @@ body {
     color: white;
 }
 
+.account-card {
+    background-color: white;
+    margin-top: 10px;
+}
 
+.submit-button {
+    margin-bottom: 10px;
+}

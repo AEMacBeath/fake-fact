@@ -13,7 +13,8 @@
                     <div class="card mb-3">
                         <div class="card text-bg-dark">
                             {% if "placeholder" in post.featured_image.url %}
-                            <img class="card-img-top" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                            <img class="card-img-top"
+                                src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
                             {% else %}
                             <img class="card-img-top" src=" {{ post.featured_image.url }}">
                             {% endif %}
@@ -25,7 +26,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                    
+                </div>
                 {% if forloop.counter|divisibleby:2 %}
             </div>
             <div class="row">

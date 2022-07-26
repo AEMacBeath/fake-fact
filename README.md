@@ -49,7 +49,19 @@ _Note: add description_
     -   Cards for posts using [Bootstrap](https://getbootstrap.com/docs/5.2/components/card/) <!--Complete-->
     -   User Stories completed
         -   [USER STORY: View posts](https://github.com/AEMacBeath/fake-fact/issues/1)
-10. Authorisation <!--ongoing-->
+10. Authorisation <!--complete-->
+    -   Set up Django allauth [add link to CI lesson used]
+        -   [USER STORY: Create Account](https://github.com/AEMacBeath/fake-fact/issues/3)]
+    -   Create view code
+11. Post deatil view <!--ongoing-->
+12. 
+
+
+
+
+
+<!-- last action - tidy up -->
+
 
 
 

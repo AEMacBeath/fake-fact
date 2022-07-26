@@ -5,7 +5,6 @@
 <div class="container-fluid">
     <div class="row">
 
-        <!-- Blog Columns -->
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for post in post_list %}
@@ -13,22 +12,19 @@
                     <div class="card mb-3">
                         <div class="card text-bg-dark">
                             {% if "placeholder" in post.featured_image.url %}
-                            <img class="card-img-top"
-                                src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                            <img class="card-img-top" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
                             {% else %}
-                            <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                            <img class="card-img-top" src="{{ post.featured_image.url }}">
                             {% endif %}
                             <div class="card-body">
                                 <h6 class="card-title">{{ post.title }}</h6>
-                                <a href="#" class="btn fake">Fake</a>
-                                <a href="#" class="btn fact">Fact</a>
+                                <a href="{% url 'post_detail' post.slug %}" class="btn fake">Fake</a>
+                                <a href="{% url 'post_detail' post.slug %}" class="btn fact">Fact</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    
-                </div>
+                <div class="col-md-6"></div>
                 {% if forloop.counter|divisibleby:2 %}
             </div>
             <div class="row">

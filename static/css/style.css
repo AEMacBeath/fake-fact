@@ -46,3 +46,7 @@ body {
 .submit-button {
     margin-bottom: 10px;
 }
+
+.post-detail-body {
+    height: 25vw;
+}

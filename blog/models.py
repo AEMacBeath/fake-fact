@@ -29,3 +29,18 @@ class Post(models.Model):
 
     def number_of_fact(self):
         return self.fact.count()
+
+class Message(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE,
+                             related_name="messages")
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='user_messages')
+    body = models.TextField()
+    received = models.DateTimeField(auto_now_add=True)
+    accepted = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ["-received"]
+
+    def __str__(self):
+        return f"Comment {self.body} by {self.author}"

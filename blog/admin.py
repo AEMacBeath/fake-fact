@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
-from .models import Post
+from .models import Post, Message
 
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
@@ -14,3 +14,12 @@ class PostAdmin(SummernoteModelAdmin):
 
     def publish_post(self, request, queryset):
         queryset.update(published=True)
+
+@admin.register(Message)
+class MessageAdmin(admin.ModelAdmin):
+    list_display = ('post', 'author', 'body', 'received', 'accepted')
+    search_fields = ('post', 'author', 'body')
+    actions = ['accept_comments']
+
+    def accept_comments(self, request, queryset):
+        queryset.update(approved=True)

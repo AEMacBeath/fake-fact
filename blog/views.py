@@ -15,11 +15,13 @@ class PostDetail(View):
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(published=True)
         post = get_object_or_404(queryset, slug=slug)
+        messages = post.messages.filter(accepted=True).order_by('received')
 
         return render(
             request,
             "post_detail.html",
             {
                 "post": post,
+                "messages": messages
             },
         )

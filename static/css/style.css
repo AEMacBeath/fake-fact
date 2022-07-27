@@ -1,4 +1,8 @@
 /*---------------------------------------- Navbar */
+.navbar {
+    background-color: #fba031;
+}
+
 .navbar-nav {
     position: absolute;
     right: 10px;
@@ -38,6 +42,7 @@ body {
     color: white;
 }
 
+/*---------------------------------------- Account */
 .account-card {
     background-color: white;
     margin-top: 10px;
@@ -47,6 +52,12 @@ body {
     margin-bottom: 10px;
 }
 
+/*---------------------------------------- Post Detail */
 .post-detail-body {
-    height: 25vw;
+    height: fit-content;
+}
+
+.message-body {
+    height: fit-content;
+    background-color: #fba031;
 }

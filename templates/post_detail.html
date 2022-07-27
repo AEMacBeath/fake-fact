@@ -1,13 +1,9 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
 <div class="container-fluid">
     <div class="row">
-
         <div class="col-12 mt-3 left">
             <div class="row">
-                <div class="col-md-3"></div>
                 <div class="col-md-6">
                     <div class="card mb-3">
                         {% if "placeholder" in post.featured_image.url %}
@@ -22,10 +18,19 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
+                {% for message in messages %}
+                <div class="col-md-3">
+                    <div class="card mb-3 message-body">
+                        <div class="card-body">
+                            <h6 class="card-title">{{ message.body | linebreaks }}</h6>
+                            <small class="card-text">{{ message.author }} {{ message.received }}</small>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
 </div>
-{%endblock%}
+
+{% endblock content %}

@@ -61,3 +61,7 @@ body {
     height: fit-content;
     background-color: #fba031;
 }
+
+.message-count {
+    background-color: grey;
+}

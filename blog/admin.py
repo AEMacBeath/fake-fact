@@ -22,4 +22,4 @@ class MessageAdmin(admin.ModelAdmin):
     actions = ['accept_comments']
 
     def accept_comments(self, request, queryset):
-        queryset.update(approved=True)
+        queryset.update(accepted=True)

@@ -84,7 +84,11 @@ _Note: add description_
 12. Messages <!--todo-->
     -   Message model
     -   Add to post_detail
-    -   User ability to CRUD messages
+    -   User ability to
+        -   Create <!--Done-->
+        -   Read <!--Done-->
+        -   Update
+        -   Detele
 13. Post deatil view (including comments) <!--todo-->
     -   [USER STORY: Open a Post](https://github.com/AEMacBeath/fake-fact/issues/8)
     -   [USER STORY: Add Comments](https://github.com/AEMacBeath/fake-fact/issues/9)

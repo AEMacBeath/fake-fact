@@ -27,16 +27,22 @@
                         </div>
                     </div>
                 </div>
-                {% for message in messages %}
                 <div class="col-md-3">
+                    {% for message in messages %}
                     <div class="card mb-3 message-body">
                         <div class="card-body">
                             <h6 class="card-title">{{ message.body | linebreaks }}</h6>
                             <small class="card-text">{{ message.author }} {{ message.received }}</small>
                         </div>
                     </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
+                {% if messaged %}
+                <div class="alert alert-success" role="alert">
+                    Your comment is pending acceptance
+                </div>
+                {% else %}
+
                 {% if user.is_authenticated %}
                 <div class="col-md-3">
                     <div class="card mb-3 message-body">
@@ -50,6 +56,7 @@
                         </div>
                     </div>
                 </div>
+                {% endif %}
                 {% endif %}
             </div>
         </div>

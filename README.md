@@ -81,7 +81,10 @@ _Note: add description_
 11. Sign in, Sign up, Sign out views
     -   _Note: Add wireframe_
     -   _Note: Add Responsive Screenshot_
-12. Comments model <!--todo-->
+12. Messages <!--todo-->
+    -   Message model
+    -   Add to post_detail
+    -   User ability to CRUD messages
 13. Post deatil view (including comments) <!--todo-->
     -   [USER STORY: Open a Post](https://github.com/AEMacBeath/fake-fact/issues/8)
     -   [USER STORY: Add Comments](https://github.com/AEMacBeath/fake-fact/issues/9)

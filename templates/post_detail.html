@@ -1,4 +1,5 @@
 {% extends 'base.html' %} {% block content %}
+{% load crispy_forms_tags %}
 
 <div class="container-fluid">
     <div class="row">
@@ -36,6 +37,20 @@
                     </div>
                 </div>
                 {% endfor %}
+                {% if user.is_authenticated %}
+                <div class="col-md-3">
+                    <div class="card mb-3 message-body">
+                        <div class="card-body message-body">
+                            <h6 class="card-title">{{ user.username }}, post a message?</h6>
+                            <form method="post">
+                                {{ message_form | crispy }}
+                                {% csrf_token %}
+                                <button type="submit" class="submit-button">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
             </div>
         </div>
     </div>

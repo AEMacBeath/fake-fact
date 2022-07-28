@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Post
+from .forms import MessageForm
 
 
 class PostList(generic.ListView):
@@ -32,6 +33,7 @@ class PostDetail(View):
                 "post": post,
                 "messages": messages,
                 "voted_fake": voted_fake,
-                "voted_fact": voted_fact
+                "voted_fact": voted_fact,
+                "message_form": MessageForm
             },
         )

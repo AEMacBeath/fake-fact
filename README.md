@@ -12,7 +12,7 @@ _Note: add description_
     -   Validator Testing
     -   Bugs
 -   Technologies Used
--   Credits
+-   Credits 
 
 ## Features _Note: add screenshots for all features_
 ### All views

@@ -65,3 +65,7 @@ body {
 .message-count {
     background-color: grey;
 }
+
+.reveal {
+    padding: 1px;
+}

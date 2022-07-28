@@ -18,8 +18,19 @@
                             {% endif %}
                             <div class="card-body">
                                 <h6 class="card-title">{{ post.title }}</h6>
+                                {% if user.is_authenticated %}
+                                <form class="d-inline" action="{% url 'post_fake' post.slug %}" method="POST">
+                                    {% csrf_token %}
+                                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn fake">Fake</button>
+                                </form>
+                                <form class="d-inline" action="{% url 'post_fact' post.slug %}" method="POST">
+                                    {% csrf_token %}
+                                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn fact">Fact</button>
+                                </form>
+                                {% else %}
                                 <a href="{% url 'post_detail' post.slug %}" class="btn fake">Fake</a>
                                 <a href="{% url 'post_detail' post.slug %}" class="btn fact">Fact</a>
+                                {% endif %}
                             </div>
                         </div>
                     </div>

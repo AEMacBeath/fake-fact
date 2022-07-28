@@ -24,11 +24,6 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-    def number_of_fake(self):
-        return self.fake.count()
-
-    def number_of_fact(self):
-        return self.fact.count()
 
 class Message(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE,

@@ -13,16 +13,17 @@
                         {% else %}
                         <img class="card-img-top" src=" {{ post.featured_image.url }}">
                         {% endif %}
-                        <div class="card-body post-detail-body">
-                            <div class="row">
-                                <div class="col-6 fake">
-                                    <strong class="text-secondary"><small>Fake </small>{{ post.number_of_fake }}<small> votes</small></strong>
-                                </div>
-                                <div class="col-6 fact">
-                                    <strong class="text-secondary"><small>Fact </small>{{ post.number_of_fact }}<small> votes</small></strong>
-                                </div>
+                        <div class="text-center">
+                            <div class="text-bg-dark reveal">
+                                {% if voted_fake %}
+                                <h4>You voted FAKE | This post is {{ post.status }}</h4>
+                                {% else %}
+                                <h4>You voted FACT | This post is {{ post.status }}</h4>
+                                {% endif %}
                             </div>
-                            <h5 class="card-title">{{ post.title }}</h5>
+                        </div>
+                        <div class="card-body post-detail-body">
+                            <h3 class="card-title">{{ post.title }}</h3>
                             <p class="card-text">{{ post.content | safe }}</p>
                         </div>
                     </div>

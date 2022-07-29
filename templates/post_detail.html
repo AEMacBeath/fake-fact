@@ -34,14 +34,14 @@
                 <!-- Accepted user messages -->
                 <div class="col-md-3">
                     {% if user.is_authenticated%}
-                        {% for message in messages %}
-                        <div class="card mb-3 message-body">
-                            <div class="card-body">
-                                <h6 class="card-title">{{ message.body | linebreaks }}</h6>
-                                <small class="card-text">{{ message.author }} {{ message.received }}</small>
-                            </div>
+                    {% for message in messages %}
+                    <div class="card mb-3 message-body">
+                        <div class="card-body">
+                            <h6 class="card-title">{{ message.body | linebreaks }}</h6>
+                            <small class="card-text">{{ message.author }} {{ message.received }}</small>
                         </div>
-                        {% endfor %}
+                    </div>
+                    {% endfor %}
                     {% else %}
                     <div class="card mb-3 message-body">
                         <div class="card-body">
@@ -77,7 +77,12 @@
                                 <small class="card-text">Accepted: {{ message.accepted }}</small>
                             </div>
                             <div>
-                                <a href="/edit_message/{{ item.id }}" class="btn">Edit</a>
+                                {% if message.author == request.user %}
+                                <div class="mt-4 mx-3">
+                                    <a class="btn btn-danger" href="{% url 'message_delete' message.id %}">Delete</a>
+                                    <a class="btn btn-primary" href="{% url 'message_update' message.id %}">Edit</a>
+                                </div>
+                                {% endif %}
                             </div>
                         </div>
                     </div>

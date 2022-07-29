@@ -1,6 +1,6 @@
 # Fake or Fact
 
-Deployed app - https://fakefact2022.herokuapp.com/
+Deployed app - [fakefact2022](https://fakefact2022.herokuapp.com/)
 
 _Note: add responsive screenshot_
 
@@ -9,8 +9,8 @@ _Note: add description_
 
 ## Table of Contents _Note: add links to ToC_
 -   Project Description
+-   [Build process](docs/planning.md)
 -   Features
--   Build Process
 -   Testing
     -   Validator Testing
     -   Bugs
@@ -41,7 +41,6 @@ _Note: add description_
         -   Main background image missing
         -   Fake Fact buttons missing from post cards
         -   Nav moved back to the left
-
 
 
 

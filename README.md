@@ -1,4 +1,7 @@
 # Fake or Fact
+
+Deployed app - https://fakefact2022.herokuapp.com/
+
 _Note: add responsive screenshot_
 
 ## Project Description

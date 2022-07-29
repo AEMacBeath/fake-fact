@@ -5,6 +5,7 @@
     <div class="row">
         <div class="col-12 mt-3 left">
             <div class="row">
+                <!-- Post detal card -->
                 <div class="col-md-6">
                     <div class="card mb-3">
                         {% if "placeholder" in post.featured_image.url %}
@@ -28,24 +29,64 @@
                         </div>
                     </div>
                 </div>
+                <!-- /Post detal card -->
+
+                <!-- Accepted user messages -->
                 <div class="col-md-3">
-                    {% for message in messages %}
+                    {% if user.is_authenticated%}
+                        {% for message in messages %}
+                        <div class="card mb-3 message-body">
+                            <div class="card-body">
+                                <h6 class="card-title">{{ message.body | linebreaks }}</h6>
+                                <small class="card-text">{{ message.author }} {{ message.received }}</small>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                    <div class="card mb-3 message-body">
+                        <div class="card-body">
+                            <h6 class="card-title">
+                                To view user messages please<br>
+                                <a class="inline" href="{% url 'account_signup' %}">Sign up</a>
+                                <span> or </span>
+                                <a class="inline" href="{% url 'account_login' %}">Sign in</a>
+                            </h6>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                <!-- /Accepted user messages -->
+
+                <div class="col-md-3">
+                    <!-- Message pending acceptance alert -->
+                    {% if messaged %}
+                    <div class="alert alert-success" role="alert">
+                        Your message is pending acceptance
+                    </div>
+                    {% endif %}
+                    <!-- /Message pending acceptance alert -->
+
+                    <!-- Users own messages-->
+                    {% for message in all_messages %}
+                    {% if message.author == user %}
                     <div class="card mb-3 message-body">
                         <div class="card-body">
                             <h6 class="card-title">{{ message.body | linebreaks }}</h6>
                             <small class="card-text">{{ message.author }} {{ message.received }}</small>
+                            <div>
+                                <small class="card-text">Accepted: {{ message.accepted }}</small>
+                            </div>
+                            <div>
+                                <a href="/edit_message/{{ item.id }}" class="btn">Edit</a>
+                            </div>
                         </div>
                     </div>
+                    {% endif %}
                     {% endfor %}
-                </div>
-                {% if messaged %}
-                <div class="alert alert-success" role="alert">
-                    Your comment is pending acceptance
-                </div>
-                {% else %}
+                    <!-- /Users own messages-->
 
-                {% if user.is_authenticated %}
-                <div class="col-md-3">
+                    <!-- User send message form -->
+                    {% if user.is_authenticated %}
                     <div class="card mb-3 message-body">
                         <div class="card-body message-body">
                             <h6 class="card-title">{{ user.username }}, post a message?</h6>
@@ -56,9 +97,9 @@
                             </form>
                         </div>
                     </div>
+                    {% endif %}
+                    <!-- /User send message form -->
                 </div>
-                {% endif %}
-                {% endif %}
             </div>
         </div>
     </div>

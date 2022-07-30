@@ -4,7 +4,7 @@ Deployed app - [fakefact2022](https://fakefact2022.herokuapp.com/)
 ## Project Description
 Fake | Fact is a blog web applcaition where users are presented with vaiours facts and myths. The user can select wether they think it is fake or fact. Once chosen they are presented with the full post details. If logged in the users can also create and view messages left by other users. 
 
-## Table of Contents _Note: add links to ToC_
+## Table of Contents
 -   [Project Description](#project-description)
 -   [Build process](docs/planning.md)
 -   [Features](#features)
@@ -12,7 +12,7 @@ Fake | Fact is a blog web applcaition where users are presented with vaiours fac
     -   [Homepage](#homepage)
     -   [Post detail](#post-detail)
     -   [Account screens](#account-screen)
--   [Testing]{#Testing}
+-   [Testing]{#testing}
     -   [Validator Testing](#validator-testing)
     -   [Bugs](#bugs)
 -   [Technologies Used](#technologies-user)
@@ -42,8 +42,10 @@ Fake | Fact is a blog web applcaition where users are presented with vaiours fac
 
 -   Validator testing
     -   [Python - PEP3](docs/pep8_screenshots.md)
-    -   [HTML - w3]
-    -   [CSS - Jigsaw]
+    -   [HTML - w3](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdashboard.heroku.com%2Fapps%2Ffakefact2022)
+        -   Some errors to be fixed.
+    -   [CSS - Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ffakefact2022.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+        -   Bootstrap CSS parse errors only.
 
 
 ## Credits

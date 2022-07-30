@@ -2,6 +2,7 @@ from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
 from .models import Post, Message
 
+#Post Model
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
 
@@ -15,6 +16,7 @@ class PostAdmin(SummernoteModelAdmin):
     def publish_post(self, request, queryset):
         queryset.update(published=True)
 
+#Message Model
 @admin.register(Message)
 class MessageAdmin(admin.ModelAdmin):
     list_display = ('post', 'author', 'body', 'received', 'accepted')

@@ -9,10 +9,10 @@
                 <div class="col-md-6">
                     <div class="card mb-3">
                         {% if "placeholder" in post.featured_image.url %}
-                        <img class="card-img-top"
+                        <img alt="post image" class="card-img-top"
                             src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
                         {% else %}
-                        <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                        <img alt="post image" class="card-img-top" src=" {{ post.featured_image.url }}">
                         {% endif %}
                         <div class="text-center">
                             <div class="text-bg-dark reveal">

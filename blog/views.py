@@ -1,9 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post, Message
-from .forms import MessageForm
-
 from django.views.generic import (
     ListView,
     DetailView,
@@ -12,19 +9,20 @@ from django.views.generic import (
     DeleteView
 )
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import get_object_or_404
-from django.utils.text import slugify
 from django.urls import reverse_lazy
 from django.contrib import messages
 
+from .models import Post, Message
+from .forms import MessageForm
 
+#Post list view
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(published=True).order_by('-created')
     template_name = 'index.html'
     paginate_by = 4
 
-
+#Post detial view
 class PostDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
@@ -55,8 +53,7 @@ class PostDetail(View):
             },
         )
 
-
-
+#Create Messages
     def post(self, request, slug, *args, **kwargs):
 
         queryset = Post.objects.filter(published=True)
@@ -94,6 +91,7 @@ class PostDetail(View):
         )
 
 
+#Fake vote view
 class PostFakeVote(View):
 
     def post(self, request, slug, *args, **kwargs):
@@ -105,7 +103,7 @@ class PostFakeVote(View):
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
-
+#Fact vote view
 class PostFactVote(View):
 
     def post(self, request, slug, *args, **kwargs):
@@ -117,6 +115,7 @@ class PostFactVote(View):
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
+#Update message
 class UpdateMessage(LoginRequiredMixin, UpdateView):
     model = Message
     fields = ["body"]
@@ -136,6 +135,7 @@ class UpdateMessage(LoginRequiredMixin, UpdateView):
     def get_queryset(self):
         return self.model.objects.filter(author=self.request.user)
 
+#Delete message
 class DeleteMessage(LoginRequiredMixin, DeleteView):
     model = Message
 

@@ -1,24 +1,25 @@
 # Fake or Fact
-
 Deployed app - [fakefact2022](https://fakefact2022.herokuapp.com/)
 
-_Note: add responsive screenshot_
-
 ## Project Description
-_Note: add description_
+Fake | Fact is a blog web applcaition where users are presented with vaiours facts and myths. The user can select wether they think it is fake or fact. Once chosen they are presented with the full post details. If logged in the users can also create and view messages left by other users. 
 
 ## Table of Contents _Note: add links to ToC_
--   Project Description
+-   [Project Description](#project-description)
 -   [Build process](docs/planning.md)
--   Features
--   Testing
-    -   Validator Testing
-    -   Bugs
--   Technologies Used
--   Credits 
+-   [Features](#features)
+    -   [Common features](#common-features)
+    -   [Homepage](#homepage)
+    -   [Post detail](#post-detail)
+    -   [Account screens](#account-screen)
+-   [Testing]{#Testing}
+    -   [Validator Testing](#validator-testing)
+    -   [Bugs](#bugs)
+-   [Technologies Used](#technologies-user)
+-   [Credits](#credits)
 
-## Features _Note: add screenshots for all features_
-### All views
+## Features
+### Common features
 -   Background image
 -   Navigation - [Bootstrap Navbar](https://getbootstrap.com/docs/5.2/components/navbar/)
 -   Footer - includes Django pagination buttons
@@ -37,14 +38,12 @@ _Note: add description_
 
 ## Testing
 -   Bugs
-    -   Heroku
-        -   Main background image missing
-        -   Fake Fact buttons missing from post cards
-        -   Nav moved back to the left
+    -   styles.css not loading in Heroku. Resolved by setting DEBUG to FALSE in settings.py
 
 -   Validator testing
-    -   
-
+    -   [Python - PEP3](docs/pep8_screenshots.md)
+    -   [HTML - w3]
+    -   [CSS - Jigsaw]
 
 
 ## Credits

@@ -2,8 +2,9 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
-#Post Model
+# Post Model
 STATUS = ((0, "Fake"), (1, "Fact"))
+
 
 class Post(models.Model):
     featured_image = CloudinaryField('image', default='placeholder')
@@ -25,7 +26,8 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-#Message Model
+
+# Message Model
 class Message(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name="messages")

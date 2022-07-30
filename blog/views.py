@@ -15,14 +15,16 @@ from django.contrib import messages
 from .models import Post, Message
 from .forms import MessageForm
 
-#Post list view
+
+# Post list view
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(published=True).order_by('-created')
     template_name = 'index.html'
     paginate_by = 4
 
-#Post detial view
+
+# Post detial view
 class PostDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
@@ -53,7 +55,8 @@ class PostDetail(View):
             },
         )
 
-#Create Messages
+
+# Create Messages
     def post(self, request, slug, *args, **kwargs):
 
         queryset = Post.objects.filter(published=True)
@@ -91,7 +94,7 @@ class PostDetail(View):
         )
 
 
-#Fake vote view
+# Fake vote view
 class PostFakeVote(View):
 
     def post(self, request, slug, *args, **kwargs):
@@ -103,7 +106,8 @@ class PostFakeVote(View):
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
-#Fact vote view
+
+# Fact vote view
 class PostFactVote(View):
 
     def post(self, request, slug, *args, **kwargs):
@@ -115,7 +119,8 @@ class PostFactVote(View):
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
-#Update message
+
+# Update message
 class UpdateMessage(LoginRequiredMixin, UpdateView):
     model = Message
     fields = ["body"]
@@ -135,7 +140,8 @@ class UpdateMessage(LoginRequiredMixin, UpdateView):
     def get_queryset(self):
         return self.model.objects.filter(author=self.request.user)
 
-#Delete message
+
+# Delete message
 class DeleteMessage(LoginRequiredMixin, DeleteView):
     model = Message
 

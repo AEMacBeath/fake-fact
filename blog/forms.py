@@ -1,7 +1,8 @@
 from django import forms
 from .models import Message
 
-#Message Form
+
+# Message Form
 class MessageForm(forms.ModelForm):
     class Meta:
         model = Message

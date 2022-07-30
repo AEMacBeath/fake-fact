@@ -28,22 +28,18 @@ body {
 }
 
 .card-body {
-    height: 10vw;
+    height: fit-content;
     object-fit: cover;
 }
 
 .fake {
     background-color: rgba(255, 0, 0, 0.409);
     color: white;
-    margin-bottom: 5px;
-    margin-top: 5px;
 }
 
 .fact {
     background-color: rgba(0, 255, 8, 0.409);
     color: white;
-    margin-bottom: 5px;
-    margin-top: 5px;
 }
 
 /*---------------------------------------- Account */
@@ -77,4 +73,10 @@ body {
 
 .update-message {
     padding-top: 10px;
+}
+
+/*---------------------------------------- Pagination button */
+.page-button {
+    background-color: #fba031;
+    color: black;
 }

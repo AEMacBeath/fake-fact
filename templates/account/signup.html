@@ -8,20 +8,23 @@
 
 <div class="contrainer-fluid">
   <div class="row">
-    <div class="col-1"></div>
-    <div class="col-3 account-card">
-      <h3>{% trans "Sign Up" %}</h3>
+    <div class="col-4 offset-4">
+      <div class="card mb-3 message-body account-card">
+        <div class="card-body message-body">
+          <h3>{% trans "Sign Up" %}</h3>
 
-      <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
-      
-      <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-        {% csrf_token %}
-        {{ form.as_p }}
-        {% if redirect_field_value %}
-        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-        {% endif %}
-        <button type="submit" class="submit-button">{% trans "Sign Up" %} &raquo;</button>
-      </form>
+          <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+          
+          <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+            {% endif %}
+            <button type="submit" class="submit-button">{% trans "Sign Up" %} &raquo;</button>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 </div>

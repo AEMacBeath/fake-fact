@@ -69,19 +69,19 @@ _Note: add links to user stories_
 11. Sign in, Sign up, Sign out views
     -   _Note: Add wireframe_
     -   _Note: Add Responsive Screenshot_
-12. Messages <!--todo-->
+12. Messages <!--Done-->
     -   Message model
     -   Add to post_detail
-    -   User ability to
-        -   Create <!--Done-->
-        -   Read <!--Done-->
+    -   User ability to <!--Done-->
+        -   Create
+        -   Read
         -   Update
         -   Detele
-13. Post deatil view (including comments) <!--todo-->
+13. Post deatil view (including comments) <!--Done-->
     -   [USER STORY: Open a Post](https://github.com/AEMacBeath/fake-fact/issues/8)
     -   [USER STORY: Add Comments](https://github.com/AEMacBeath/fake-fact/issues/9)
     -   [USER STORY: View Comments](https://github.com/AEMacBeath/fake-fact/issues/10)
-14. Site Pagination Buttons
+14. Site Pagination Buttons <!--done-->
     -   [USER STORY: Site Pagination](https://github.com/AEMacBeath/fake-fact/issues/11)
 15. Responsive design
 00. Testing

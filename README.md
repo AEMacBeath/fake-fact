@@ -51,3 +51,4 @@ _Note: add description_
 -   Content
     -   Fact posts from [bestlifeonline](https://bestlifeonline.com/common-myths/)
     -   Fake posts from [Insider](https://www.insider.com/true-facts-that-sound-fake-2017-8#the-guinness-book-of-world-records-was-created-to-settle-bar-arguments-4)
+-   Code from https://dontrepeatyourself.org/post/django-blog-tutorial-part-4-posts-and-comments/

@@ -35,11 +35,15 @@ body {
 .fake {
     background-color: rgba(255, 0, 0, 0.409);
     color: white;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .fact {
     background-color: rgba(0, 255, 8, 0.409);
     color: white;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 /*---------------------------------------- Account */
@@ -69,4 +73,8 @@ body {
 
 .reveal {
     padding: 1px;
+}
+
+.update-message {
+    padding-top: 10px;
 }

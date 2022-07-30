@@ -83,7 +83,7 @@ _Note: add links to user stories_
     -   [USER STORY: View Comments](https://github.com/AEMacBeath/fake-fact/issues/10)
 14. Site Pagination Buttons <!--done-->
     -   [USER STORY: Site Pagination](https://github.com/AEMacBeath/fake-fact/issues/11)
-15. Responsive design
+15. Responsive design <!--done-->
 00. Testing
 00. Tidy up
 00. Finish README

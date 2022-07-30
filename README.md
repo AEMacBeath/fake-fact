@@ -42,6 +42,9 @@ _Note: add description_
         -   Fake Fact buttons missing from post cards
         -   Nav moved back to the left
 
+-   Validator testing
+    -   
+
 
 
 ## Credits

@@ -79,6 +79,7 @@
                             <div>
                                 {% if message.author == request.user %}
                                 <div class="mt-4 mx-3">
+                                    <a class="btn btn-danger" href="{% url 'message_update' message.id %}" value="{{ message.body }}">Update</a>
                                     <a class="btn btn-danger" href="{% url 'message_delete' message.id %}">Delete</a>
                                 </div>
                                 {% endif %}

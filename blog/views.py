@@ -112,6 +112,17 @@ class PostFactVote(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
+class MessageUpdateView(UpdateView):
+    model = Message
+    template_name = 'message_update.html'
+    fields = ['body', ]
+    form = MessageForm
+
+    def get_success_url(self):
+        post = self.object.post 
+        return reverse_lazy('post_detail', kwargs={'slug': post.slug})
+
+
 class MessageDeleteView(DeleteView):
     model = Message
     template_name = 'message_delete.html'

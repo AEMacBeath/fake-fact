@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="card mb-3 message-body" id="message-form">
+  <div class="card-body message-body">
+      <h6 class="card-title">{{ user.username }}, update your message below</h6>
+      <form method="post">
+          {{ form | crispy }}
+          {% csrf_token %}
+          <button type="submit" class="submit-button fake" value="{{ post.slug }}">Update</button>
+      </form>
+  </div>
+</div>
+{% endblock content %}

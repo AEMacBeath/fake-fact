@@ -3,7 +3,6 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.views.generic.edit import DeleteView, UpdateView
-from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .models import Post, Message
 from .forms import MessageForm
@@ -112,6 +111,7 @@ class PostFactVote(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
+# Update Message
 class MessageUpdateView(UpdateView):
     model = Message
     template_name = 'message_update.html'
@@ -123,10 +123,11 @@ class MessageUpdateView(UpdateView):
         return reverse_lazy('post_detail', kwargs={'slug': post.slug})
 
 
+# Delete Message
 class MessageDeleteView(DeleteView):
     model = Message
     template_name = 'message_delete.html'
 
     def get_success_url(self):
-        post = self.object.post 
+        post = self.object.post
         return reverse_lazy('post_detail', kwargs={'slug': post.slug})

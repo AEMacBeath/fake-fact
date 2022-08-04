@@ -98,7 +98,7 @@
                             <form method="post">
                                 {{ message_form | crispy }}
                                 {% csrf_token %}
-                                <button type="submit" class="submit-button">Send</button>
+                                <button type="submit" class="submit-button fake" value="{{ post.slug }}">Send</button>
                             </form>
                         </div>
                     </div>

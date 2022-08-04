@@ -1,20 +1,12 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from django.views.generic import (
-    ListView,
-    DetailView,
-    CreateView,
-    UpdateView,
-    DeleteView
-)
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
-from django.contrib import messages
+from django.views.generic.edit import DeleteView, UpdateView
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .models import Post, Message
 from .forms import MessageForm
-
 
 # Post list view
 class PostList(generic.ListView):
@@ -120,35 +112,10 @@ class PostFactVote(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
-# Update message
-class UpdateMessage(LoginRequiredMixin, UpdateView):
+class MessageDeleteView(DeleteView):
     model = Message
-    fields = ["body"]
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        update = True
-        context['update'] = update
-
-        return context
+    template_name = 'message_delete.html'
 
     def get_success_url(self):
-        messages.success(
-            self.request, 'Your post has been updated successfully.')
-        return reverse_lazy("home")
-
-    def get_queryset(self):
-        return self.model.objects.filter(author=self.request.user)
-
-
-# Delete message
-class DeleteMessage(LoginRequiredMixin, DeleteView):
-    model = Message
-
-    def get_success_url(self):
-        messages.success(
-            self.request, 'Your post has been deleted successfully.')
-        return reverse_lazy("home")
-
-    def get_queryset(self):
-        return self.model.objects.filter(author=self.request.user)
+        post = self.object.post 
+        return reverse_lazy('post_detail', kwargs={'slug': post.slug})

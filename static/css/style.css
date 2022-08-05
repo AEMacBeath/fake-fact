@@ -3,11 +3,6 @@
     background-color: #fba031;
 }
 
-.navbar-nav {
-    position: absolute;
-    right: 10px;
-}
-
 /*---------------------------------------- Background image */
 body {
     height: 100vh;

@@ -14,18 +14,16 @@
                         {% else %}
                         <img alt="post image" class="card-img-top" src=" {{ post.featured_image.url }}">
                         {% endif %}
-                        <div class="text-center">
-                            <div class="text-bg-dark reveal">
-                                {% if voted_fake %}
-                                <h4>You voted FAKE | This post is {{ post.status }}</h4>
-                                {% else %}
-                                <h4>You voted FACT | This post is {{ post.status }}</h4>
-                                {% endif %}
-                            </div>
-                        </div>
                         <div class="card-body post-detail-body">
                             <h3 class="card-title">{{ post.title }}</h3>
                             <p class="card-text">{{ post.content | safe }}</p>
+                            <div class="text-bg-dark">
+                                {% if voted_fake %}
+                                <h5 class="users-vote">You voted FAKE</h5>
+                                {% else %}
+                                <h5 class="users-vote">You voted FACT</h5>
+                                {% endif %}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -46,10 +44,10 @@
                     <div class="card mb-3 message-body">
                         <div class="card-body">
                             <h6 class="card-title">
-                                To view user messages please<br>
-                                <a class="inline" href="{% url 'account_signup' %}">Sign up</a>
-                                <span> or </span>
-                                <a class="inline" href="{% url 'account_login' %}">Sign in</a>
+                                To view user and leave messages please
+                                <a class="inline text-dark" href="{% url 'account_signup' %}">Sign up</a>
+                                or
+                                <a class="inline text-dark" href="{% url 'account_login' %}">Sign in</a>
                             </h6>
                         </div>
                     </div>
@@ -65,7 +63,7 @@
                     </div>
                     {% endif %}
                     <!-- /Message pending acceptance alert -->
-
+                    
                     <!-- Users own messages-->
                     {% for message in all_messages %}
                     {% if message.author == user %}
@@ -79,7 +77,8 @@
                             <div>
                                 {% if message.author == request.user %}
                                 <div class="mt-4 mx-3">
-                                    <a class="btn btn-danger" href="{% url 'message_update' message.id %}" value="{{ message.body }}">Update</a>
+                                    <a class="btn btn-warning" href="{% url 'message_update' message.id %}"
+                                        value="{{ message.body }}">Update</a>
                                     <a class="btn btn-danger" href="{% url 'message_delete' message.id %}">Delete</a>
                                 </div>
                                 {% endif %}

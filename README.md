@@ -6,7 +6,7 @@ Fake | Fact is a blog web applcaition where users are presented with vaiours fac
 
 ## Table of Contents
 -   [Project Description](#project-description)
--   [Build process](docs/planning.md)
+-   [Project Planning](docs/planning.md)
 -   [Features](#features)
     -   [Common features](#common-features)
     -   [Homepage](#homepage)
@@ -19,40 +19,42 @@ Fake | Fact is a blog web applcaition where users are presented with vaiours fac
 -   [Credits](#credits)
 
 ## Features
-### Common features
+### Homepage
 -   Background image
 -   Navigation - [Bootstrap Navbar](https://getbootstrap.com/docs/5.2/components/navbar/)
--   Footer - includes Django pagination buttons
-
-### Homepage
 -   Post title cards with Fake and Fact buttons - [Bootrap Cards](https://getbootstrap.com/docs/5.2/components/card/)
+-   Pagination buttons
 
+#### Hompage Screenshot
+![homepage_screenshot](readme_images/homepage_screenshot.png)
 
 ### Post Detail
--   Post content cards - [Bootrap Cards](https://getbootstrap.com/docs/5.2/components/card/)
--   Number of fake or fact votes
--   Comments
+-   Post content [Bootrap Cards](https://getbootstrap.com/docs/5.2/components/card/)
+-   Accepted user comments
+-   Users own comments
+-   MessageForm [Bootrap Card](https://getbootstrap.com/docs/5.2/components/card/)
+
+#### Post Detail Screenshot
+_Add Screenshot_
 
 ### Account screen
 -   Sign up, sign in, sigh out screens
+_Add Screenshots_
 
 ## Testing
 -   Bugs
     -   styles.css not loading in Heroku. Resolved by setting DEBUG to FALSE in settings.py
 
--   Validator testing
+-   Validator testing _retest_
     -   [Python - PEP3](docs/pep8_screenshots.md)
     -   [HTML - w3](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdashboard.heroku.com%2Fapps%2Ffakefact2022)
-        -   Some errors to be fixed.
     -   [CSS - Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ffakefact2022.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-        -   Bootstrap CSS parse errors only.
-
 
 ## Credits
--   CI I think before i blog 
--   Bootstrap documentation
+-   Code Institute - I think before i blog walkthrough use for initial setup
+-   [Bootstrap documentation](https://getbootstrap.com/)
 -   Wireframes created on [Lucid](https://lucid.app/)
--   Content
+-   Post content
     -   Fact posts from [bestlifeonline](https://bestlifeonline.com/common-myths/)
     -   Fake posts from [Insider](https://www.insider.com/true-facts-that-sound-fake-2017-8#the-guinness-book-of-world-records-was-created-to-settle-bar-arguments-4)
--   Code from https://dontrepeatyourself.org/post/django-blog-tutorial-part-4-posts-and-comments/
+-   [thisdavej.com](https://thisdavej.com/copy-table-in-excel-and-paste-as-a-markdown-table/) Excel to Markdown converter used to input model diagrams in panning.md

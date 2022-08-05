@@ -15,6 +15,32 @@ class PostList(generic.ListView):
     paginate_by = 4
 
 
+# Fake vote view
+class PostFakeVote(View):
+
+    def post(self, request, slug, *args, **kwargs):
+        post = get_object_or_404(Post, slug=slug)
+        if post.fake.filter(id=request.user.id).exists():
+            post.fake.remove(request.user)
+        else:
+            post.fake.add(request.user)
+
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+# Fact vote view
+class PostFactVote(View):
+
+    def post(self, request, slug, *args, **kwargs):
+        post = get_object_or_404(Post, slug=slug)
+        if post.fact.filter(id=request.user.id).exists():
+            post.fact.remove(request.user)
+        else:
+            post.fact.add(request.user)
+
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
 # Post detial view
 class PostDetail(View):
 
@@ -83,32 +109,6 @@ class PostDetail(View):
                 "voted_fact": voted_fact
             },
         )
-
-
-# Fake vote view
-class PostFakeVote(View):
-
-    def post(self, request, slug, *args, **kwargs):
-        post = get_object_or_404(Post, slug=slug)
-        if post.fake.filter(id=request.user.id).exists():
-            post.fake.remove(request.user)
-        else:
-            post.fake.add(request.user)
-
-        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-
-
-# Fact vote view
-class PostFactVote(View):
-
-    def post(self, request, slug, *args, **kwargs):
-        post = get_object_or_404(Post, slug=slug)
-        if post.fact.filter(id=request.user.id).exists():
-            post.fact.remove(request.user)
-        else:
-            post.fact.add(request.user)
-
-        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
 # Update Message

@@ -14,9 +14,9 @@
         <div class="card-body message-body">
           <h3>{% trans "Sign Up" %}</h3>
 
-          <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+          <p>{% blocktrans %}Already have an account? Then please <a class="text-dark" href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
           
-          <form class="signup text-dark" id="signup_form" method="post" action="{% url 'account_signup' %}">
+          <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
             {% csrf_token %}
             {{ form.as_p }}
             {% if redirect_field_value %}

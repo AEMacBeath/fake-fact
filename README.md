@@ -1,5 +1,8 @@
 # Fake or Fact
-Deployed app - [fakefact2022](https://fakefact2022.herokuapp.com/)
+## Deployed app - [fakefact2022](https://fakefact2022.herokuapp.com/)
+
+## Responsive screenshot
+![responsive](readme_images/responsive.PNG)
 
 ## Project Description
 Fake | Fact is a blog web applcaition where users are presented with vaiours facts and myths. The user can select wether they think it is fake or fact. Once chosen they are presented with the full post details. If logged in the users can also create and view messages left by other users. 
@@ -25,8 +28,11 @@ Fake | Fact is a blog web applcaition where users are presented with vaiours fac
 -   Post title cards with Fake and Fact buttons - [Bootrap Cards](https://getbootstrap.com/docs/5.2/components/card/)
 -   Pagination buttons
 
+#### Homepage Wireframe
+![wireframe_homepage](readme_images/wireframe_homepage.PNG)
+
 #### Hompage Screenshot
-![homepage_screenshot](readme_images/homepage.png)
+![homepage](readme_images/homepage.png)
 
 ### Post Detail
 -   Post content [Bootrap Cards](https://getbootstrap.com/docs/5.2/components/card/)
@@ -34,12 +40,38 @@ Fake | Fact is a blog web applcaition where users are presented with vaiours fac
 -   Users own comments
 -   MessageForm [Bootrap Card](https://getbootstrap.com/docs/5.2/components/card/)
 
-#### Post Detail Screenshot
-_Add Screenshot_
+#### Post Detail Wireframe
+![wireframe_post_detail](readme_images/wireframe_post_detail.PNG)
 
-### Account screen
--   Sign up, sign in, sigh out screens
-_Add Screenshots_
+#### Post Detail (Signed out) Screenshot
+![pose_detail_signed_out](readme_images/post_detail_signed_out.PNG)
+
+#### Post Detail (Signed in) Screenshot
+![pose_detail_signed_out](readme_images/post_detail_signed_in.PNG)
+
+### Account screens
+-   Extends base.html
+-   Each screen contains a [Bootrap Card](https://getbootstrap.com/docs/5.2/components/card/) for the form.
+
+#### Sign up Screenshot
+![sign_up](readme_images/sign_up.PNG)
+
+#### Sign in Screenshot
+![sign_in](readme_images/sign_in.PNG)
+
+#### Sign out Screenshot
+![sign_out](readme_images/sign_out.png)
+
+### Update Message
+-   Extends base.html
+-   Contains a [Bootrap Card](https://getbootstrap.com/docs/5.2/components/card/) for the form.
+-   Pre-populated form body with existing message
+
+#### Update Message Screenshot
+![update_message](readme_images/update_message.PNG)
+
+#### Delete Message Screenshot
+![delete_message](readme_images/delete_message.PNG)
 
 ## Testing
 

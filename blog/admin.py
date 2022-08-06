@@ -4,14 +4,14 @@ from .models import Post, Message
 
 
 # Post Model
-
+@admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
 
     list_display = ('title', 'status', 'published', 'created')
     search_fields = ['title', 'content']
-    prepopulated_fields = {'slug': ('title', )}
+    prepopulated_fields = {'slug': ('title',)}
     list_filter = ('published', 'status')
-    summernote_fields = 'content'
+    summernote_fields = ('content')
     actions = ['publish_post']
 
     def publish_post(self, request, queryset):
@@ -19,9 +19,8 @@ class PostAdmin(SummernoteModelAdmin):
 
 
 # Message Model
-
+@admin.register(Message)
 class MessageAdmin(admin.ModelAdmin):
-
     list_display = ('post', 'author', 'body', 'received', 'accepted')
     search_fields = ('post', 'author', 'body')
     actions = ['accept_comments']

@@ -7,6 +7,7 @@ from django.views.generic.edit import DeleteView, UpdateView
 from .models import Post, Message
 from .forms import MessageForm
 
+
 # Post list view
 class PostList(generic.ListView):
     model = Post
@@ -119,7 +120,7 @@ class MessageUpdateView(UpdateView):
     form = MessageForm
 
     def get_success_url(self):
-        post = self.object.post 
+        post = self.object.post
         return reverse_lazy('post_detail', kwargs={'slug': post.slug})
 
 

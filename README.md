@@ -26,7 +26,7 @@ Fake | Fact is a blog web applcaition where users are presented with vaiours fac
 -   Pagination buttons
 
 #### Hompage Screenshot
-![homepage_screenshot](readme_images/homepage_screenshot.png)
+![homepage_screenshot](readme_images/homepage.png)
 
 ### Post Detail
 -   Post content [Bootrap Cards](https://getbootstrap.com/docs/5.2/components/card/)
@@ -55,10 +55,10 @@ _Add Screenshots_
 #### Fake / Fact buttons
 1. Fake button on each post
     -   opens detail and messages for that post
-    -   displayes You voted Fake at the bottom of the post detail card _Not working_
+    -   displayes You voted Fake at the bottom of the post detail card
 2. Fact button on each post
     -   opens detail and messages for that post
-    -   displayes You voted Fact at the bottom of the post detail card _Not working_
+    -   displayes You voted Fact at the bottom of the post detail card
 
 #### Pagination
 1. Next button - goes to next page of posts
@@ -69,10 +69,33 @@ _Add Screenshots_
 2. Update button on users own comment - update and submit form - returns to post detail page
 3. Delete button on users own comment - opens confirmation screen - Delete button returns to post detail page
 
-### Validator testing _retest_
--   [Python - PEP3](docs/pep8_screenshots.md)
--   [HTML - w3](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdashboard.heroku.com%2Fapps%2Ffakefact2022)
+### Validator testing
+-   [HTML - w3](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffakefact2022.herokuapp.com%2F)
 -   [CSS - Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ffakefact2022.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+    -   /dist/css/bootstrap.min.css parse errors only
+-   [Python - PEP8](docs/pep8_screenshots.md)
+
+#### blog/admin.py
+![pep8_blog_admin](readme_images/pep8_blog_admin.PNG)
+
+#### blog/forms.py
+![pep8_blog_forms](readme_images/pep8_blog_forms.PNG)
+
+#### blog/models.py
+![pep8_blog_models](readme_images/pep8_blog_models.PNG)
+
+#### blog/urls.py
+![pep8_blog_urls](readme_images/pep8_blog_urls.PNG)
+
+#### blog/views.py
+![pep8_blog_views](readme_images/pep8_blog_views.PNG)
+
+#### fakefact/settings.py
+Line 145 too long. Can't break STATIC_STORAGE url to fix.
+![pep8_fakefact_settings](readme_images/pep8_fakefact_settings.PNG)
+
+#### fakefact/urls.py
+![pep8_fakefact_urls](readme_images/pep8_fakefact_urls.PNG)
 
 ## Credits
 -   Code Institute - I think before i blog walkthrough use for initial setup
